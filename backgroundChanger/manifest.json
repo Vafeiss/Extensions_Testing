@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "2secBackgroundChanger",
+    "version": "1.0",
+    "description": "Extension that every 2 seconds changes its background.",
+    "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
