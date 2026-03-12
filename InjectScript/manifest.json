@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Inject Script into DOM test",
+    "version": "1.0",
+    "description": "Inject a simple script into the DOM",
+    "permissions": ["scripting"],
+    "content_scripts": [
+    {
+    "matches": ["<all_urls>"],
+    "js": ["content.js"],
+    "run_at": "document_end"
+    }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["script.js"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
