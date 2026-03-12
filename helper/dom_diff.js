@@ -5,7 +5,7 @@ import { dirname, resolve } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-export function get_differences_between_strings(str1, str2) {
+export function diffStrings(str1, str2) {
     const differences = Diff.diffChars(str1, str2);
 
     const added = [];
@@ -13,7 +13,6 @@ export function get_differences_between_strings(str1, str2) {
 
     differences.forEach(part => {
         const trimmed = part.value.trim();
-        if (!trimmed) return;
         if (part.added) added.push(trimmed);
         if (part.removed) removed.push(trimmed);
     });

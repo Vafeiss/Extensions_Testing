@@ -2,45 +2,45 @@ import puppeteer from "puppeteer";
 import fs from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
-import { get_differences_between_strings } from '../helper/dom_diff.js';
+import { diffStrings } from '../helper/dom_diff.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-export async function compare_dom_with_extension(extension_name, url = "https://example.com") {
+export async function compareDOMs(extensionName, url = "https://example.com") {
 
-    const no_extension_browser = await puppeteer.launch({
+    const noExtensionBrowser = await puppeteer.launch({
         headless: true
     });
 
-    const page = await no_extension_browser.newPage();
+    const page = await noExtensionBrowser.newPage();
     await page.goto(url, { waitUntil: "domcontentloaded" });
 
-    const dom = await page.evaluate(() => document.documentElement.outerHTML);
-    fs.writeFileSync("CleanDOM", dom);
+    const originalDOM = await page.evaluate(() => document.documentElement.outerHTML);
+    fs.writeFileSync("CleanDOM", originalDOM);
 
-    await no_extension_browser.close();
+    await noExtensionBrowser.close();
 
-    const extension_path = resolve(__dirname, "../extensions/" + extension_name);
+    const extensionPath = resolve(__dirname, "../extensions/" + extensionName);
 
     const extension_browser = await puppeteer.launch({
         headless: true,
         args: [
-            `--disable-extensions-except=${extension_path}`,
-            `--load-extension=${extension_path}`,
+            `--disable-extensions-except=${extensionPath}`,
+            `--load-extension=${extensionPath}`,
         ]
     });
 
-    const extension_page = await extension_browser.newPage();
-    await extension_page.goto(url, { waitUntil: "domcontentloaded" });
+    const extensionPage = await extension_browser.newPage();
+    await extensionPage.goto(url, { waitUntil: "domcontentloaded" });
 
     await new Promise(resolve => setTimeout(resolve, 8000));
 
-    const modified_dom = await extension_page.evaluate(() => document.documentElement.outerHTML);
+    const modifiedDOM = await extensionPage.evaluate(() => document.documentElement.outerHTML);
 
-    fs.writeFileSync("ModifiedDOM", modified_dom);
+    fs.writeFileSync("ModifiedDOM", modifiedDOM);
 
     await extension_browser.close();
 
-    return get_differences_between_strings(dom, modified_dom);
+    return diffStrings(originalDOM, modifiedDOM);
 }
