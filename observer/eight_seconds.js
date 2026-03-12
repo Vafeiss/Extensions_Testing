@@ -1,6 +1,12 @@
-const puppeteer = require("puppeteer");
-const fs = require("fs");
-const {resolve} = require("node:path");
+import puppeteer from "puppeteer";
+import fs from "fs";
+import { resolve, dirname } from "path";
+import { fileURLToPath } from "url";
+import { get_differences_between_strings } from '../helper/dom_diff.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 (async () => {
 
     const no_extension_browser =  await puppeteer.launch({
@@ -10,7 +16,6 @@ const {resolve} = require("node:path");
     await page.goto("https://example.com", {waitUntil: "domcontentloaded" });
     const dom = await page.evaluate(() => document.documentElement.outerHTML);
     fs.writeFileSync("CleanDOM", dom);
-    console.log("OK cl");
     await no_extension_browser.close();
 
     const extensionPath = resolve(__dirname, "../InjectScript");
@@ -30,7 +35,8 @@ const {resolve} = require("node:path");
     fs.writeFileSync("ModifiedDOM", modified_dom);
 
     await extension_browser.close();
-    console.log("DOM Change detected!");
-    console.log("OK ex");
+    const result = get_differences_between_strings(dom, modified_dom);
+    console.log("Added: ", result.added);
+    console.log("Removed:", result.removed);
 
 })();
