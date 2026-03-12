@@ -13,7 +13,7 @@ const {resolve} = require("node:path");
     console.log("OK cl");
     await no_extension_browser.close();
 
-    const extensionPath = resolve(__dirname, "../backgroundChanger");
+    const extensionPath = resolve(__dirname, "../InjectScript");
 
     const extension_browser = await puppeteer.launch({
         headless: false, args: [
