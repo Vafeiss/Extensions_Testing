@@ -34,7 +34,7 @@ export async function compareDOMs(extensionName, url = "https://example.com") {
     const extensionPage = await extension_browser.newPage();
     await extensionPage.goto(url, { waitUntil: "domcontentloaded" });
 
-    await new Promise(resolve => setTimeout(resolve, 8000));
+    await new Promise(resolve => setTimeout(resolve, 1000));
 
     const modifiedDOM = await extensionPage.evaluate(() => document.documentElement.outerHTML);
 

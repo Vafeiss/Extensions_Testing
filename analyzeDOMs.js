@@ -36,6 +36,8 @@ export async function analyzeExtensionChanges(extensionName) {
     console.log("Added:", final.added);
     console.log("Removed:", final.removed);
 
+    return final
+
 }
 
 
