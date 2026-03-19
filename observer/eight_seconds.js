@@ -17,7 +17,6 @@ export async function compareDOMs(extensionName, url = "https://example.com") {
     await page.goto(url, { waitUntil: "domcontentloaded" });
 
     const originalDOM = await page.evaluate(() => document.documentElement.outerHTML);
-    fs.writeFileSync("CleanDOM", originalDOM);
 
     await noExtensionBrowser.close();
 
@@ -38,7 +37,6 @@ export async function compareDOMs(extensionName, url = "https://example.com") {
 
     const modifiedDOM = await extensionPage.evaluate(() => document.documentElement.outerHTML);
 
-    fs.writeFileSync("ModifiedDOM", modifiedDOM);
 
     await extension_browser.close();
 
