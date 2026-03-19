@@ -12,11 +12,12 @@ export function diffStrings(str1, str2) {
     const removed = [];
 
     differences.forEach(part => {
-        if (part.added)
-            added.push(part.value);
-        if (part.removed) removed.push(
-            part.value
-        );
+        if (part.added) {
+            added.push(...part.value.split(' ').filter(Boolean));
+        }
+        if (part.removed) {
+            removed.push(...part.value.split(' ').filter(Boolean));
+        }
     });
 
     return { added, removed };
