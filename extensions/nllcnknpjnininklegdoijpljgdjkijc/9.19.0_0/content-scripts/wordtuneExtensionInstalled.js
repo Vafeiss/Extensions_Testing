@@ -1,0 +1,2 @@
+var wordtuneextensioninstalled=function(){"use strict";function o(n){return n}const r={world:"MAIN",runAt:"document_start",matches:["<all_urls>"],main(){window._wordtune_extension_installed=!0}};function s(){}function t(n,...u){}const e={debug:(...n)=>t(console.debug,...n),log:(...n)=>t(console.log,...n),warn:(...n)=>t(console.warn,...n),error:(...n)=>t(console.error,...n)};return(async()=>{try{return await r.main()}catch(n){throw e.error('The content script "wordtuneExtensionInstalled" crashed on startup!',n),n}})()}();
+wordtuneextensioninstalled;

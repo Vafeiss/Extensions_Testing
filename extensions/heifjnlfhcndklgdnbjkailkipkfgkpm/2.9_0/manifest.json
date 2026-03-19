@@ -1,0 +1,30 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icon128.plasmo.3c1ed2d2.png",
+         "16": "icon16.plasmo.6c567d50.png",
+         "32": "icon32.plasmo.76b92899.png",
+         "48": "icon48.plasmo.aced7582.png",
+         "64": "icon64.plasmo.8bb5e6e0.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "author": "Rafi Haiari. \u003Chello.rafihaidari@gmail.com>",
+   "background": {
+      "service_worker": "static/background/index.js"
+   },
+   "description": "Weatherly Extension: Real-time weather updates, location-based data, wind, atmospheric conditions, astronomy insights, and forecasts",
+   "icons": {
+      "128": "icon128.plasmo.3c1ed2d2.png",
+      "16": "icon16.plasmo.6c567d50.png",
+      "32": "icon32.plasmo.76b92899.png",
+      "48": "icon48.plasmo.aced7582.png",
+      "64": "icon64.plasmo.8bb5e6e0.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtN0FdoGDiFYej5k9kUGE4pMSFZklKUnnPR8G6mtQjdJbvz/tMD3N6A5eC3GW6NX/CKlb3PLQQg89JZsPqaj2GJdBYV7OGRkB6xjP8wJ1Jp9F47zlVaxUaT8ucQEgkIurNnndUlFKDLKSs2BjXPNdNHV2EOO9hySPK3Fgy5EYo1eAQGR2PTzJZAjdtQwDTSZBPPTovlWgIjLHOvT6NPJ+AwRmoLWTII7DvN/6kGqK9wEvvysrrMtmYbIusY3IyfWtBhXpKOf75bshlARIcDPfmq0ORwVq1vYsmb5bNflPkpgckQrqg2D9KDUmNefF23QmKHyRWklOY5fBRuSlnGm07QIDAQAB",
+   "manifest_version": 3,
+   "name": "Weatherly (Weather Forecast)",
+   "permissions": [ "storage", "idle", "alarms" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.9"
+}

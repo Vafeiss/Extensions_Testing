@@ -1,0 +1,30 @@
+{
+   "$schema": "https://json.schemastore.org/chrome-manifest",
+   "action": {
+      "default_icon": {
+         "128": "images/head.png",
+         "16": "images/head.png",
+         "24": "images/head.png",
+         "32": "images/head.png",
+         "48": "images/head.png"
+      },
+      "default_popup": "index.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "description": "The authentic snake game in a popup. Smooth animations and a saved high score!",
+   "icons": {
+      "128": "images/head.png",
+      "16": "images/head.png",
+      "48": "images/head.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsiA5y0fTbVoAeNmUGlioqycGoxfFp05wr2OWADAzBvkyUtjRuVpDq+268V6Djl4ohdXoOedOEopSkwlAXtr8nH6Itvd0ouvs86zYMvV6EtKlYKqacCDTMeLQKklQiw2spWGCNV4IDR63ayPT1RSSUqeyudZOUBlvzRwg+ht+7qOFVEj9wY0PbEvvUlJA6pWNKZo9wC77Y9n1HUTiQZ4AAqVrH4ozOxtJ4qvae4G8Oo6GURPsmN9zPWkA+lO0KITASz/SALL7SKkUebUt6Y9GIA0KESJhmM/7gVpm1oeZ+pcfKFR/bLxKfP9YCn/I4WfqgX841oWMCwxYN7UndQMPYQIDAQAB",
+   "manifest_version": 3,
+   "name": "Snake",
+   "offline_enabled": true,
+   "permissions": [ "storage" ],
+   "short_name": "Snake",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.2.36"
+}
