@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Extension Matcher",
+    "version": "1.0",
+    "description": "Read DOM make request to backend and send response to content script",
+    "permissions": ["activeTab"],
+    "host_permissions" : ["http://localhost:3000/*"],
+    "background": {
+    "service_worker": "background.js"
+     },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ]
+
+}
