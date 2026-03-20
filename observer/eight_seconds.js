@@ -10,7 +10,7 @@ const __dirname = dirname(__filename);
 export async function compareDOMs(extensionName, url = "https://example.com") {
 
     const noExtensionBrowser = await puppeteer.launch({
-        headless: false
+        headless: true
     });
 
     const page = await noExtensionBrowser.newPage();
@@ -23,7 +23,7 @@ export async function compareDOMs(extensionName, url = "https://example.com") {
     const extensionPath = resolve(__dirname, "../extensions/" + extensionName);
 
     const extension_browser = await puppeteer.launch({
-        headless: false,
+        headless: true,
         args: [
             `--disable-extensions-except=${extensionPath}`,
             `--load-extension=${extensionPath}`,
