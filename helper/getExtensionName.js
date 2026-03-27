@@ -22,12 +22,10 @@ export function getExtensionName(identity) {
      */
     var data = fs.readFileSync(manifestPath, "utf-8");
     var name = JSON.parse(data).name;
-    console.log("Original: " + name);
 
     if (name.includes("MSG")) {
       var noMSG = name.replace("MSG", "");
       var temp = noMSG.replace(/^_+/, "").replace(/_+$/, "");
-      console.log(temp);
      
       /**
        * Find the first folder that includes en
@@ -43,7 +41,6 @@ export function getExtensionName(identity) {
           break;
         }
       }
-      console.log("Folder Name: " + folderName);
 
       /**
        * Find path of json and read it
@@ -70,7 +67,6 @@ export function getExtensionName(identity) {
     //Name doesnt include MSG is returned immediately
     else return name;
   } catch (error) {
-    console.log(error);
     return "Undefined"
   }
 }

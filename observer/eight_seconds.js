@@ -7,7 +7,7 @@ import { diffStrings } from '../helper/dom_diff.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-export async function compareDOMs(extensionName, url = "https://example.com") {
+export async function compareDOMs(extensionName, url = " http://extensionsv3.antreaschrist.com/") {
 
     const noExtensionBrowser = await puppeteer.launch({
         headless: true
