@@ -1,0 +1,11 @@
+chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/9.19.0_0/asset/**/*.woff
+chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/9.19.0_0/assets/**/*.woff2
+chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/9.19.0_0/assets/**/*.png
+chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/9.19.0_0/assets/**/*.svg
+chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/9.19.0_0/assets/**/*.jpg
+chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/9.19.0_0/assets/**/*.gif
+chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/9.19.0_0/assets/**/*.css
+chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/9.19.0_0/chunks/*.js
+chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/9.19.0_0/content-scripts/*.js
+chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/9.19.0_0/content-scripts/content.css
+chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/9.19.0_0/content-scripts/read.css

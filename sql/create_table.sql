@@ -10,3 +10,10 @@ CREATE TABLE fingerprints (
   fingerprint LONGTEXT
 );
 
+CREATE TABLE urls (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  fingerprint_id BIGINT,
+  url TEXT NOT NULL,
+  FOREIGN KEY (fingerprint_id) REFERENCES fingerprints(id) ON DELETE CASCADE
+);
+
