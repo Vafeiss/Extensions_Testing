@@ -24,8 +24,7 @@ export function getResources(identity) {
             console.log(`Extension ${identity} uses dynamic URLs for web_accessible_resources, skipping URL generation.`);
             return [];
         }
-        const resourcePaths = WAR.flatMap(entry =>
-        Array.isArray(entry.resources) ? entry.resources : []);
+        const resourcePaths = WAR.flatMap(entry =>Array.isArray(entry.resources) ? entry.resources : []);
         return resourcePaths;
     } catch (error) {
         console.error(`Error reading manifest for ${identity}:`, error);

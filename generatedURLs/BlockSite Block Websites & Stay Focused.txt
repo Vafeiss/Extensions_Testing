@@ -1,2 +1,2 @@
-chrome-extension://eiimnmioipafcokbfikbljfdeojpcgbh/7.0.0_0/public/*
-chrome-extension://eiimnmioipafcokbfikbljfdeojpcgbh/7.0.0_0/public/images/*
+chrome-extension://eiimnmioipafcokbfikbljfdeojpcgbh/public/*
+chrome-extension://eiimnmioipafcokbfikbljfdeojpcgbh/public/images/*

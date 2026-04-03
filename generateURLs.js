@@ -1,5 +1,5 @@
 /*This file is responsible for Generating the URLs requests for the WAR fingerprinting process. */
-/*Idea: chrome-extension://<extension-id>/path/to/resource generate those urls and store them
+/*Idea: chrome-extension://<extension-id>/path/to/resource generate those urls and store them,
 if a URL that generates doesnt have the same id as the extension means it uses Dynamic URL
 or if cant generate the URL means it uses matches: for a specific website */
 
@@ -8,7 +8,7 @@ import { connect } from "./database/connect.js"; /* NOT YET IMPLEMENTED */
 import { getExtensionName } from "./helper/getExtensionName.js";
 import { getResources } from "./helper/getWARURL.js";
 
-conn = await connect(); /* NOT YET IMPLEMENTED */
+const conn = await connect(); /* NOT YET IMPLEMENTED */
 const extensions = [
     "difoiogjjojoaoomphldepapgpbgkhkb/5.25.8_0",
     "eiimnmioipafcokbfikbljfdeojpcgbh/7.0.0_0",
@@ -23,7 +23,7 @@ const extensions = [
 
 for (const identity of extensions) {
     /*
-     * Read the name from manifest.json
+     * Read the name from manifest.jsons
      */
     const name = getExtensionName(identity);
     console.log(name);
@@ -37,7 +37,8 @@ for (const identity of extensions) {
         console.log(`No WAR resources for ${identity}, skipping insertion.`);
         continue;
     }
-    const urls = paths.map(path => `chrome-extension://${identity}/${path}`);
+    const extensionId = identity.split("/")[0];
+    const urls = paths.map(path => `chrome-extension://${extensionId}/${path}`);
     //await insertURL(conn, identity, name, urls.join("\n")); /* NOT YET IMPLEMENTED */
     const safeName = String(name).replace(/[<>:"/\\|?*]+/g, "_");
     /* Store the generated URLs in a text file first then implemtend DB(In progress) */

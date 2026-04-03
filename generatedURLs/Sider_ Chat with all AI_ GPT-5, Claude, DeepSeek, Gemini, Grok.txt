@@ -1,5 +1,5 @@
-chrome-extension://difoiogjjojoaoomphldepapgpbgkhkb/5.25.8_0/content-all.css
-chrome-extension://difoiogjjojoaoomphldepapgpbgkhkb/5.25.8_0/content-script.css
-chrome-extension://difoiogjjojoaoomphldepapgpbgkhkb/5.25.8_0/i18n/*
-chrome-extension://difoiogjjojoaoomphldepapgpbgkhkb/5.25.8_0/assets/*
-chrome-extension://difoiogjjojoaoomphldepapgpbgkhkb/5.25.8_0/fonts/*
+chrome-extension://difoiogjjojoaoomphldepapgpbgkhkb/content-all.css
+chrome-extension://difoiogjjojoaoomphldepapgpbgkhkb/content-script.css
+chrome-extension://difoiogjjojoaoomphldepapgpbgkhkb/i18n/*
+chrome-extension://difoiogjjojoaoomphldepapgpbgkhkb/assets/*
+chrome-extension://difoiogjjojoaoomphldepapgpbgkhkb/fonts/*
