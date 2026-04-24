@@ -8,7 +8,7 @@ import { connect } from "./database/connect.js"; /* NOT YET IMPLEMENTED */
 import { getExtensionName } from "./helper/getExtensionName.js";
 import { getResources } from "./helper/getWARURL.js";
 
-const conn = await connect(); /* NOT YET IMPLEMENTED */
+// const conn = await connect(); /* NOT YET IMPLEMENTED */
 const extensions = [
     "difoiogjjojoaoomphldepapgpbgkhkb/5.25.8_0",
     "eiimnmioipafcokbfikbljfdeojpcgbh/7.0.0_0",
