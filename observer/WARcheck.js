@@ -1,29 +1,38 @@
 import puppeteer from "puppeteer";
-import { resolve, dirname } from "path";
-import { fileURLToPath } from "url";
-import generatedURLs from "../generatedURLs/index.js";
-import { testingWAR } from "../helper/testingWAR.js";
+import {resolve, dirname} from "path";
+import {fileURLToPath} from "url";
+import {testResources} from "../helper/testingWAR.js";
+
+
+function fetchgeneratedURLs(extensionID) {
+	return resolve(__dirname, "../generatedURLs", `${extensionID}.txt`);
+}
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-export async function checkWAR(extensionName,url = "http://extensionsv3.antreaschrist.com/"
-) {
-const extensionPath = resolve(__dirname, "../extensions", extensionName);
-const resources = generatedURLs[extensionName] || [];
+export async function checkWAR(extensionID,extensionName, url = "http://extensionsv3.antreaschrist.com/") {
+	const resources = fetchgeneratedURLs(extensionID) || [];
 
-const browser = await puppeteer.launch({
-    headless: false,
-    pipe: true,
-    enableExtensions: [extensionPath],
-});
+	console.log(`Testing ${resources.length} resources for extension: ${extensionID}`);
 
-try {
-    const page = await browser.newPage();
-    await page.goto(url, {waitUntil: "networkidle2",});
-    const results = await testingWAR(page, extensionName, resources);
-    return results;
-} finally {
-    await browser.close();
-}
+	const extensionPath = resolve(__dirname, "../extensions/" + extensionID);
+
+ const extension_browser = await puppeteer.launch({
+        headless: true,
+        args: [
+            `--disable-extensions-except=${extensionPath}`,
+            `--load-extension=${extensionPath}`,
+        ]
+    });
+
+
+	try {
+		const page = await extension_browser.newPage();
+		await page.goto(url, {waitUntil: "networkidle2"});
+		const results = await testResources(page, extensionID,extensionName, resources);
+		return results;
+	} finally {
+		await extension_browser.close();
+	}
 }

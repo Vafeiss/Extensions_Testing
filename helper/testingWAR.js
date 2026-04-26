@@ -1,4 +1,6 @@
-export function testResources(extensionName , resources , url) {
+export async function testResources(page, extensionID, extensionName, resources) {
+
+	return await page.evaluate(async ({extensionName, resources, extensionID}) => {{
 const results = [];
 
 for(const WARurl of resources){
@@ -6,22 +8,26 @@ for(const WARurl of resources){
         const response = await fetch(WARurl);
 
         results.push({
+            extensionID: extensionID,
             extensionName: extensionName,
-            resource: resource,
             WARurl: WARurl,
             succes: response.ok,
             status: response.status,
-            contentType: response.ok ? response.headers.get("Content-Type") : null,
-        })}
-        catch(error){
+        });
+    }catch(error){
             results.push({
+                extensionID: extensionID,
                 extensionName: extensionName,
                 WARurl: WARurl,
                 success: false,
                 statusCode: null,
-                contentType: null,
                 error: error.message,
-            })
+            });
         }
-        
-}};
+    }
+    return results;
+}
+},
+    { extensionName, resources, extensionID }
+);
+}
