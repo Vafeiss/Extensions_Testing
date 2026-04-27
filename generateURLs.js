@@ -40,11 +40,10 @@ for (const identity of extensions) {
     const extensionId = identity.split("/")[0];
     const urls = paths.map(path => `chrome-extension://${extensionId}/${path}`);
     //await insertURL(conn, identity, name, urls.join("\n")); /* NOT YET IMPLEMENTED */
-    const safeName = String(name).replace(/[<>:"/\\|?*]+/g, "_");
     /* Store the generated URLs in a text file first then implemtend DB(In progress) */
     fs.mkdirSync("./generatedURLs", { recursive: true });
     fs.writeFileSync(
-        `./generatedURLs/${safeName}.txt`,
+        `./generatedURLs/${extensionId}.txt`,
         urls.map(String).join("\n"),
         "utf8"
     );

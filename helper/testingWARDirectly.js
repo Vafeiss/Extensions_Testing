@@ -1,11 +1,10 @@
-export async function testResources(page, extensionID, extensionName, resources) {
-	return await page.evaluate(async ({extensionName, resources, extensionID}) => {
-
+export async function testResourcesDirectly(browser, extensionID, extensionName, resources) {
 		const results = [];
 
 		for (const WARurl of resources) {
+            const page = await browser.newPage();
 			try {
-				const response = await fetch(WARurl);
+				const response = await page.goto(WARurl, {waitUntil:"domcontentloaded", timeout: 10000});
 
 				results.push({
 					extensionID,
@@ -24,10 +23,12 @@ export async function testResources(page, extensionID, extensionName, resources)
 					success: false,
 					statusCode: null,
 					error: error.message
-
-				});
-			}
+				}); 
+			}   
+                finally{
+                    await page.close();
+                }
 		}
 		return results;
-	}, {extensionName, resources, extensionID});
-}
+	}
+
