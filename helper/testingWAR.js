@@ -7,14 +7,17 @@ export async function testResources(page, extensionID, extensionName, resources)
 			try {
 				const response = await fetch(WARurl);
 
-				results.push({
-					extensionID,
-					extensionName,
-					WARurl,
-					succes: response.ok,
-					status: response.status
-
-				});
+				if (response.ok) {
+					results.push({
+						extensionID,
+						extensionName,
+						WARurl,
+						succes: response.ok,
+						status: response.status
+					});
+					console.log(`Successfully fingerprint for extension ${extensionName} (ID: ${extensionID})`);
+					break;
+				}
 
 			} catch (error) {
 				results.push({

@@ -1,11 +1,4 @@
-chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/asset/**/*.woff
-chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/assets/**/*.woff2
-chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/assets/**/*.png
-chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/assets/**/*.svg
-chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/assets/**/*.jpg
-chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/assets/**/*.gif
-chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/assets/**/*.css
-chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/chunks/*.js
-chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/content-scripts/*.js
+chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/C:\Users\User\OneDrive\Desktop\extensions\Extensions_New\Extensions_Testing\extensions\nllcnknpjnininklegdoijpljgdjkijc\9.19.0_0\chunks\*.js
+chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/C:\Users\User\OneDrive\Desktop\extensions\Extensions_New\Extensions_Testing\extensions\nllcnknpjnininklegdoijpljgdjkijc\9.19.0_0\content-scripts\*.js
 chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/content-scripts/content.css
 chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/content-scripts/read.css

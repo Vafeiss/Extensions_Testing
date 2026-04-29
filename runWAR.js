@@ -28,6 +28,8 @@ for (const extension of extensions) {
 		} else {
 			console.log("No results for extension: " + name);
 		}
+		console.log("--------------------------------------------------");
+		console.log("--------------------------------------------------");
 	} catch (error) {
 		console.error("Error during WAR check:", error);
 	}

@@ -42,7 +42,6 @@ export async function checkWAR(extensionID, extensionName, url = "http://extensi
 		const page = await extension_browser.newPage();
 		await page.goto(url, {waitUntil: "networkidle2"});
 		const results = await testResources(page, cleanExtensionID, extensionName, resources);//fetch approach
-		const results2 = await testResourcesDirectly(extension_browser, cleanExtensionID, extensionName, resources); //direct approach 
 		return results
 	} finally {
 		await extension_browser.close();
