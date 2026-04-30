@@ -1,0 +1,9 @@
+[
+  {
+    "extensionID": "difoiogjjojoaoomphldepapgpbgkhkb",
+    "extensionName": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok",
+    "WARurl": "chrome-extension://difoiogjjojoaoomphldepapgpbgkhkb/fonts/Poppins-700.woff2",
+    "succes": true,
+    "status": 200
+  }
+]

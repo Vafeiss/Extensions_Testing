@@ -1,0 +1,9 @@
+[
+  {
+    "extensionID": "nllcnknpjnininklegdoijpljgdjkijc",
+    "extensionName": "Wordtune: AI Paraphrasing and Grammar Tool",
+    "WARurl": "chrome-extension://nllcnknpjnininklegdoijpljgdjkijc/content-scripts/read.css",
+    "succes": true,
+    "status": 200
+  }
+]

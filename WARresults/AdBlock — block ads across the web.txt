@@ -1,0 +1,154 @@
+[
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/adblock-deny-push-notifications-requests.js",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/purify.min.js",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/icons/adblock-icons.woff2",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/icons/MaterialIcons-Regular.woff2",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/fonts/font-face.css",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/fonts/lato-bold.woff",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/fonts/lato-ext-bold.woff",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/fonts/lato-regular.woff",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/fonts/lato-ext-regular.woff",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/fonts/lato-bolditalic.woff",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/fonts/lato-ext-bolditalic.woff",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/fonts/lato-italic.woff",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/fonts/lato-ext-italic.woff",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/icons/default_theme/logo.svg",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/icons/dark_theme/logo.svg",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/icons/adblock-20.svg",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/icons/adblock-19.png",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/icons/icon24.png",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  },
+  {
+    "extensionID": "gighmmpiobklfepjocnamgkkbiglidom",
+    "extensionName": "AdBlock — block ads across the web",
+    "WARurl": "chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/adblock-uiscripts-adblock-wizard.css",
+    "success": false,
+    "statusCode": null,
+    "error": "Failed to fetch"
+  }
+]

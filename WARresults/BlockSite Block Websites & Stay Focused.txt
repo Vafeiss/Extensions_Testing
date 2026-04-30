@@ -1,0 +1,9 @@
+[
+  {
+    "extensionID": "eiimnmioipafcokbfikbljfdeojpcgbh",
+    "extensionName": "BlockSite Block Websites & Stay Focused",
+    "WARurl": "chrome-extension://eiimnmioipafcokbfikbljfdeojpcgbh/public/images/x-button.svg",
+    "succes": true,
+    "status": 200
+  }
+]

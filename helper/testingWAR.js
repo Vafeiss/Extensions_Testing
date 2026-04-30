@@ -15,7 +15,6 @@ export async function testResources(page, extensionID, extensionName, resources)
 						succes: response.ok,
 						status: response.status
 					});
-					console.log(`Successfully fingerprint for extension ${extensionName} (ID: ${extensionID})`);
 					break;
 				}
 

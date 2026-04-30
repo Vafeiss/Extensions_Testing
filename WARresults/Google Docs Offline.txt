@@ -1,0 +1,9 @@
+[
+  {
+    "extensionID": "ghbmnnjooekpmoecnnnilnnbdlolhkhi",
+    "extensionName": "Google Docs Offline",
+    "WARurl": "chrome-extension://ghbmnnjooekpmoecnnnilnnbdlolhkhi/page_embed_script.js",
+    "succes": true,
+    "status": 200
+  }
+]

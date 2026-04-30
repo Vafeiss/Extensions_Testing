@@ -41,20 +41,26 @@ for (const identity of extensions) { /*
 
 	const extensionId = identity.split("/")[0];
 	const finalpaths = [];
+	const pendingPaths = [...paths];
 
-	for (const path of paths) {
-		if (path.includes("*")) {
-			const expandedPaths = clearWildCards(path, identity);
+	//make a loop for paths
+	while (pendingPaths.length > 0) {
+		const currentPath = pendingPaths.pop();
+
+		//if the path contains a wildcad expand it and add it
+		if (currentPath.includes("*")) {
+			const expandedPaths = clearWildCards(currentPath, identity);
 			
 			if (expandedPaths && expandedPaths.length > 0) {
-				finalpaths.push(... expandedPaths);
+				pendingPaths.push(...expandedPaths);
 			}
 
-		} else {
-			finalpaths.push(path);
+			continue;
 		}
-	}
 
+		finalpaths.push(currentPath);
+	}
+	//generate the URLs using id and the path created before
 	const urls = finalpaths.map(path => `chrome-extension://${extensionId}/${path}`);
 	// await insertURL(conn, identity, name, urls.join("\n")); /* NOT YET IMPLEMENTED */
 	/* Store the generated URLs in a text file first then implemtend DB(In progress) */
